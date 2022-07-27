@@ -1,0 +1,17 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.0",
+    "libraryName": "spfx-command-palette",
+    "libraryId": "5126a208-e53d-440b-90c1-ea2f3293ee65",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-command-palette",
+    "solutionShortDescription": "spfx-command-palette description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}
