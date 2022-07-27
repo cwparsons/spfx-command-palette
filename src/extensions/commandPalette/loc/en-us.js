@@ -1,5 +1,5 @@
-define([], function() {
-  return {
-    "Title": "CommandPaletteApplicationCustomizer"
-  }
+define([], function () {
+	return {
+		Title: 'CommandPaletteApplicationCustomizer'
+	};
 });

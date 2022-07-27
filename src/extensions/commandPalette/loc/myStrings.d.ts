@@ -1,8 +1,8 @@
 declare interface ICommandPaletteApplicationCustomizerStrings {
-  Title: string;
+	Title: string;
 }
 
 declare module 'CommandPaletteApplicationCustomizerStrings' {
-  const strings: ICommandPaletteApplicationCustomizerStrings;
-  export = strings;
+	const strings: ICommandPaletteApplicationCustomizerStrings;
+	export = strings;
 }

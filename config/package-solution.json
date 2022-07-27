@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "spfx-command-palette-client-side-solution",
+    "name": "Command Palette",
     "id": "5126a208-e53d-440b-90c1-ea2f3293ee65",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
