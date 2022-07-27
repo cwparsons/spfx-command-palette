@@ -3,7 +3,7 @@
   "solution": {
     "name": "Command Palette",
     "id": "5126a208-e53d-440b-90c1-ea2f3293ee65",
-    "version": "1.0.0.0",
+    "version": "0.1.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -12,7 +12,7 @@
       "websiteUrl": "",
       "privacyUrl": "",
       "termsOfUseUrl": "",
-      "mpnId": "Undefined-1.15.0"
+      "mpnId": ""
     },
     "metadata": {
       "shortDescription": {
