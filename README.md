@@ -2,20 +2,17 @@
 
 ## Summary
 
-Short summary on functionality and used technologies.
+A command palette for SharePoint using SharePoint Framework (SPFx) and [ninja-keys](https://github.com/ssleptsov/ninja-keys).
 
-[picture of the solution in action, if possible]
+<video src="https://user-images.githubusercontent.com/786967/181392887-1ed8519b-dd22-4271-ab05-ac852062bcbc.mp4"></video>
+
+## Installation
+
+Download the `.sppkg` from the [releases](https://github.com/cwparsons/spfx-command-palette/releases) page.
 
 ## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.13-green.svg)
-
-## Applies to
-
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
+![version](https://img.shields.io/badge/version-1.15.0-green.svg)
 
 ## Disclaimer
 
@@ -30,11 +27,3 @@ Short summary on functionality and used technologies.
 - in the command-line run:
   - **npm install**
   - **gulp serve**
-
-## References
-
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
