@@ -17,7 +17,7 @@
 import { IReadonlyTheme, ThemeProvider, ThemeChangedEventArgs } from '@microsoft/sp-component-base';
 import { ISPEventObserver, ServiceScope } from '@microsoft/sp-core-library';
 import { isEqual } from '@microsoft/sp-lodash-subset';
-import { createContext, createElement, useContext, useEffect, useRef, useState } from 'react';
+import { createContext, createElement, ReactNode, useContext, useEffect, useRef, useState } from 'react';
 
 /**
  * Create the React context for storing the SharePoint theme.
@@ -25,7 +25,7 @@ import { createContext, createElement, useContext, useEffect, useRef, useState }
 export const SpThemeContext = createContext<IReadonlyTheme>(undefined);
 
 type SpThemeProviderProps = {
-	children?: React.ReactNode;
+	children?: ReactNode;
 	observer?: ISPEventObserver;
 	serviceScope: ServiceScope;
 };

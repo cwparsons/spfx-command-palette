@@ -3,18 +3,31 @@ import * as React from 'react';
 import 'ninja-keys';
 import { useRef, useEffect } from 'react';
 
-import { CommandPaletteProps } from '../command-palette/CommandPaletteProps';
+import { Command } from '../../Commands';
 import { useSpTheme } from '../theme-provider/ThemeProvider';
 
-export const CommandPalette = ({ commands }: CommandPaletteProps) => {
+export type NinjaKeysProps = {
+	placeholder?: string;
+	disableHotkeys?: boolean;
+	hideBreadcrumbs?: boolean;
+	openHotkey?: string;
+	navigationUpHotkey?: string;
+	navigationDownHotkey?: string;
+	closeHotkey?: string;
+	goBackHotkey?: string;
+	selectHotkey?: string;
+	hotKeysJoinedView?: boolean;
+	noAutoLoadMdIcons?: boolean;
+};
+
+export type CommandPaletteProps = NinjaKeysProps & {
+	commands: Command[];
+	openOnLoad?: boolean;
+};
+
+export const CommandPalette = ({ commands, openOnLoad = true, noAutoLoadMdIcons = true, ...ninjaKeyProps }: CommandPaletteProps) => {
 	const ninjaKeys = useRef(null);
 	const theme = useSpTheme();
-
-	const transformedCommands = commands.map((a) => ({
-		...a,
-		title: a.name,
-		handler: a.perform
-	}));
 
 	const style = {
 		'--ninja-accent-color': theme.palette.themePrimary,
@@ -27,9 +40,19 @@ export const CommandPalette = ({ commands }: CommandPaletteProps) => {
 
 	useEffect(() => {
 		if (ninjaKeys.current) {
-			ninjaKeys.current.data = transformedCommands;
+			ninjaKeys.current.data = commands.map((a) => ({
+				...a,
+				title: a.name,
+				handler: a.perform
+			}));
+
+			if (openOnLoad) {
+				setTimeout(() => {
+					ninjaKeys.current.open();
+				});
+			}
 		}
 	}, []);
 
-	return <ninja-keys ref={ninjaKeys} style={style} />;
+	return <ninja-keys noAutoLoadMdIcons={noAutoLoadMdIcons} {...ninjaKeyProps} ref={ninjaKeys} style={style} />;
 };

@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "analyze": "gulp clean && gulp bundle --ship --analyze && open-cli ./temp/stats/spfx-command-palette.stats.html",
     "build": "gulp bundle",
     "clean": "gulp clean",
-    "dist": "gulp clean --ship && gulp bundle --ship && gulp package-solution --ship",
+    "dist": "gulp clean && gulp bundle --ship && gulp package-solution --ship",
     "fast-serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve",
     "serve": "gulp serve"
   },
@@ -14,10 +15,8 @@
     "@microsoft/sp-core-library": "1.15.2",
     "@microsoft/sp-http": "1.15.2",
     "@microsoft/sp-lodash-subset": "1.15.2",
-    "kbar": "0.1.0-beta.36",
     "ninja-keys": "1.2.2",
     "react": "16.13.1",
-    "react-command-palette": "0.18.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
@@ -37,6 +36,8 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "gulp": "4.0.2",
     "gulp-eslint7": "0.3.2",
-    "spfx-fast-serve-helpers": "1.15.3"
+    "open-cli": "7.0.1",
+    "spfx-fast-serve-helpers": "1.15.3",
+    "webpack-bundle-analyzer": "4.5.0"
   }
 }
