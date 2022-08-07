@@ -37,6 +37,13 @@ const adminUrl = `https://${window.location.hostname.replace('.sharepoint.com', 
 export const CommandList = (context: ApplicationCustomizerContext): Command[] => {
 	const SiteActions: Command[] = [
 		{
+			id: 'site-settings',
+			name: 'Site settings',
+			perform: () => {
+				openPage(`${context.pageContext.site.absoluteUrl}/_layouts/15/settings.aspx`);
+			}
+		},
+		{
 			id: 'add-a-page',
 			name: 'Add a page',
 			perform: () => {
