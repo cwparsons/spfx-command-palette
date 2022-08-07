@@ -13,9 +13,9 @@ import { CommandPalette } from './components/ninja-keys/CommandPalette';
 
 import * as strings from 'CommandPaletteApplicationCustomizerStrings';
 
-const LOG_SOURCE: string = 'CommandPaletteApplicationCustomizer';
+const LOG_SOURCE = 'CommandPaletteApplicationCustomizer';
 
-export default class CommandPaletteApplicationCustomizer extends BaseApplicationCustomizer<{}> {
+export default class CommandPaletteApplicationCustomizer extends BaseApplicationCustomizer<Record<string, never>> {
 	private static _placeholder?: PlaceholderContent;
 
 	public onInit(): Promise<void> {

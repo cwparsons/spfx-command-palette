@@ -34,7 +34,7 @@ jobs:
         run: npx gulp bundle --ship
 
       - name: Create SharePoint Framework package
-        run: gulp package-solution --ship
+        run: npx gulp package-solution --ship
 
       - name: Upload SharePoint Framework package
         uses: actions/upload-artifact@v3
