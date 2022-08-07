@@ -1,31 +1,21 @@
+###
+# Continuous integration workflow
+#
+# A workflow that runs on all code pushes to main, feature and hotfix branches.
+# This workflow is to help quickly identify changes that prevent building and
+# packaging our SharePoint Framework project.
+###
+
 name: Continuous integration
 
 on:
   push:
     branches:
-      - 'main'
-      - 'feature/*'
-      - 'hotfix/*'
+      - "main"
+      - "feature/*"
+      - "hotfix/*"
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build release package
-        run: npm run dist
+  build:
+    name: CI build
+    uses: ./.github/workflows/build-package.yml
