@@ -653,6 +653,18 @@ export const CommandList = (context: ApplicationCustomizerContext): Command[] =>
 			}
 		},
 		{
+			id: 'add-development-debug-query-string',
+			name: '🐞 Add development debug query string',
+			perform: () => {
+				let url = window.location.href;
+
+				url = updateQueryStringParameter(url, 'loadSPFX', 'true');
+				url = updateQueryStringParameter(url, 'debugManifestsFile', 'https://localhost:4321/temp/manifests.js');
+
+				window.location.href = url;
+			}
+		},
+		{
 			id: 'tenant-app-catalog',
 			name: 'Tenant app catalog',
 			perform: async () => {
