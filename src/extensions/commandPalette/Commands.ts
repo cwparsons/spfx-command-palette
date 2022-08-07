@@ -675,17 +675,10 @@ export const CommandList = (context: ApplicationCustomizerContext): Command[] =>
 			}
 		},
 		{
-			id: 'maintenance-mode',
-			name: 'Maintenance mode',
-			perform: () => {
-				openPage(updateQueryStringParameter(window.location.href, 'maintenancemode', 'true'));
-			}
-		},
-		{
 			id: 'disable-custom-extensions-and-web-parts',
-			name: 'Disable custom extensions and web parts',
+			name: 'Disable custom extensions and web parts (maintenance mode)',
 			perform: () => {
-				openPage(updateQueryStringParameter(window.location.href, 'maintenancemode', 'true'));
+				window.location.href = updateQueryStringParameter(window.location.href, 'maintenancemode', 'true');
 			}
 		}
 	];
