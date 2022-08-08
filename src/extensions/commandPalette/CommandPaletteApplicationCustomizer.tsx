@@ -42,9 +42,9 @@ export default class CommandPaletteApplicationCustomizer extends BaseApplication
 	}
 
 	private _openCommandPalette(ev: KeyboardEvent): void {
-		ev.preventDefault();
-
 		if (ev.key === 'k' && (ev.ctrlKey || ev.metaKey)) {
+			ev.preventDefault();
+
 			this.context.placeholderProvider.changedEvent.add(this, this._render);
 
 			document.removeEventListener('keydown', this.openCommandPalette);
