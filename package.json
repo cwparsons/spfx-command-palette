@@ -1,6 +1,6 @@
 {
   "name": "spfx-command-palette",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "analyze": "gulp clean && gulp bundle --ship --analyze && open-cli ./temp/stats/spfx-command-palette.stats.html",
